@@ -36,3 +36,70 @@ function showNotes() {
 if (noteButton && noteDisplay) {
     noteButton.addEventListener("click", showNotes);
 }
+
+// SEARCH MY NOTES FEATURE
+
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
+const clearButton = document.querySelector("#clearButton");
+const searchResults = document.querySelector("#searchResults");
+
+// Search the existing notes array
+function searchNotes() {
+
+    const keyword = searchInput.value.trim().toLowerCase();
+
+    // Clear previous results
+    searchResults.innerHTML = "";
+
+    if (keyword === "") {
+        searchResults.textContent =
+            "Please enter a keyword to search.";
+        return;
+    }
+
+    // Find notes containing the keyword
+    const matchingNotes = notes.filter(function(note) {
+        return note.toLowerCase().includes(keyword);
+    });
+
+    if (matchingNotes.length > 0) {
+
+        const count = document.createElement("p");
+        count.textContent =
+            `${matchingNotes.length} matching notes found:`;
+        searchResults.appendChild(count);
+
+        matchingNotes.forEach(function(note) {
+            const result = document.createElement("p");
+            result.className = "search-result";
+            result.textContent = note;
+            searchResults.appendChild(result);
+        });
+
+    } else {
+        searchResults.textContent =
+            "No matching notes found. Try another keyword.";
+    }
+}
+
+// Clear the search
+function clearSearch() {
+    searchInput.value = "";
+    searchResults.textContent = "";
+}
+
+// Connect the buttons
+if (searchInput && searchButton &&
+    clearButton && searchResults) {
+
+    searchButton.addEventListener("click", searchNotes);
+    clearButton.addEventListener("click", clearSearch);
+
+    // Allow Enter key to search
+    searchInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchNotes();
+        }
+    });
+}
