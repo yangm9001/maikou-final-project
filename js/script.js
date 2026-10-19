@@ -65,10 +65,14 @@ function searchNotes() {
 
     if (matchingNotes.length > 0) {
 
+
         const count = document.createElement("p");
+
         count.textContent =
-            `${matchingNotes.length} matching notes found:`;
+            `${matchingNotes.length} matching ${matchingNotes.length === 1 ? "note" : "notes"} found:`;
+
         searchResults.appendChild(count);
+
 
         matchingNotes.forEach(function(note) {
             const result = document.createElement("p");
