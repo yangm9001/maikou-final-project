@@ -2,10 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0">
+
         <title>Mai Kou Yang | Software Systems</title>
 
-        <link rel="stylesheet" href="css/styles.css"
+        <link rel="stylesheet" href="css/styles.css">
+
     </head>
         
     <body>
@@ -19,17 +22,27 @@
 
             <main>
 
-                <section>
+                <section class="about-section">
+                    
                     <h2>About Me</h2>
 
+                    <div class="about-container">
+
+
                     <img src="images/profile.jpg"
-                         alt="Profile picture of Mai Kou Yang"
+                         alt="My profile picture"
+                         class="profile-pic">
+                    
+                    <div class="about-text">
 
                     <p>
                         Hello! My name is Mai Kou and I am a student at Western Technical College.
-                        <br>
+                        <br><br>
                         I am currently studying to become a software developer and I am very excited and eager to learn more about this field.
-                    </p>     
+                    </p>  
+                    </div>
+
+        </div>
 
                 </section>
 
@@ -40,31 +53,54 @@
                         In this course, I am learning about HTML, CSS, JavaScript, Git, and GitHub.
                     </p>
 
-                    <a href="https://github.com/" target="_blank">Visit GitHub</a>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
 
                 </section>
 
-                <section>
+                <section class="notes-section">
                     <h2>Course Notes</h2>
 
                     <p>
-                        I will use this section to keep track of important concepts and notes from class.
+                        Click the button to see something
+                        I have learned in class!
                     </p>
 
-                    <button>View My Notes</button>
+                    <button id="noteButton">
+                        View My Notes
+                    </button>
+                    
+                    <p id="noteDisplay">
+                        Course notes will appear here.
+                    </p>
                 </section>
 
-                <section>
+                <section class="search-section">
                     <h2>Search My Notes</h2>
 
-                    <input type="text" placeholder="Search notes...">
+                    <p>
+                        Looking for something specific?
+                        Search my course notes below!
+                    </p>
+
+                    <input type="text" id="searchInput" placeholder="Search notes..." aria-label="Search course notes">
+
+                    <button id="searchButton">
+                        Search Notes
+                    </button>
+
+                    <button id="clearButton">
+                        Clear
+                    </button>
+
+                    <div id="searchResults"></div>
 
                 </section>
 
             </main>
 
         </div>
+        
+        <script src="js/script.js"></script>
 
     </body>
-    </head>
 </html>

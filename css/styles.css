@@ -1,0 +1,187 @@
+/* Main website background */
+body {
+    background-color: #536b45;
+    color: #263326;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', 
+                Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+/* Center the entire website */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+/* Header */
+header {
+    background-color: #344b32;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+/* Floating cards for all sections */
+section {
+    background-color: #f2f1e6;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Floating animation */
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid #536b45;
+}
+
+/* About Me text */
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Links */
+a {
+    color: #345c3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #678b52;
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #536b45;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #344b32;
+}
+
+/* Search Notes Section */
+.search-section {
+    text-align: center;
+}
+
+/* Search input */
+input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 2px solid #a8b99d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Search buttons */
+#searchButton,
+#clearButton {
+    margin: 5px;
+}
+
+/* Clear button */
+#clearButton {
+    background-color: #6e7e66;
+}
+
+#clearButton:hover {
+    background-color: #344b32;
+}
+
+/* Search results container */
+#searchResults {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Individual search result */
+.search-result {
+    background-color: #d7e1d0;
+    color: #344b32;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #536b45;
+}
+
+/* Course Notes display */
+#noteDisplay {
+    background-color: #d7e1d0;
+    padding: 20px;
+    border-radius: 10px;
+    color: #344b32;
+    font-size: 18px;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    section {
+        transition: none;
+    }
+
+    section:hover {
+        transform: none;
+    }
+}
