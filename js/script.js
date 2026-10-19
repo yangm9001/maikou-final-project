@@ -17,25 +17,54 @@ const notes = [
 
 ];
 
+
 let noteIndex = 0;
+let typingTimer;
 
 const noteButton = document.querySelector("#noteButton");
 const noteDisplay = document.querySelector("#noteDisplay");
 
 function showNotes() {
+
+    // Stop any previous typing animation
+    clearInterval(typingTimer);
+
+    // Restart after the last note
     if (noteIndex >= notes.length) {
         noteIndex = 0;
     }
 
-    noteDisplay.textContent =
-    `Note ${noteIndex + 1} of ${notes.length}: ${notes[noteIndex]}`;
+    // Get the complete note
+    const noteText =
+        `Note ${noteIndex + 1} of ${notes.length}: ${notes[noteIndex]}`;
 
-    noteIndex++;    
+    // Clear the display before typing
+    noteDisplay.textContent = "";
+
+    let characterIndex = 0;
+
+    // Type one character at a time
+    typingTimer = setInterval(function() {
+
+        noteDisplay.textContent += noteText.charAt(characterIndex);
+
+        characterIndex++;
+
+        // Stop when the note is complete
+        if (characterIndex >= noteText.length) {
+            clearInterval(typingTimer);
+        }
+
+    }, 40);
+
+    // Move to the next note
+    noteIndex++;
 }
 
 if (noteButton && noteDisplay) {
     noteButton.addEventListener("click", showNotes);
 }
+
 
 // SEARCH MY NOTES FEATURE
 
