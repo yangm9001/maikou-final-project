@@ -3,9 +3,9 @@ body {
     background-color: #536b45;
     color: #263326;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', 
+                Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
-    padding: 30px 15px;
 }
 /* Center the entire website */
 .container {
@@ -22,7 +22,7 @@ header {
     padding: 35px 20px;
     border-radius: 15px;
     margin-bottom: 30px;
-    box-shawdow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -30,40 +30,32 @@ h1 {
     font-size: 38px;
     margin-bottom: 10px;
 }
-/* Floating hover animation */
+/* Floating cards for all sections */
+section {
+    background-color: #f2f1e6;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Floating animation */
 section:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Section headings */
-h2 {
-    color: #344b32;
-    font-size: 26px;
-    margin-top: 0;
-}
-
-img {
-    width: 200px;
-    height: 200px
-
-}
-
-.about-section {
-    width: 80%;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #e8f4f8;
-    border-radius: 12px;
-}
-/* About Me layerout */
+/* About Me layout */
 .about-container {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
+/* Profile picture */
 .profile-pic {
     width: 120px;
     height: 120px;
@@ -73,6 +65,7 @@ img {
     border: 4px solid #536b45;
 }
 
+/* About Me text */
 .about-text {
     flex: 1;
     text-align: left;
@@ -81,11 +74,13 @@ img {
 /* Links */
 a {
     color: #345c3c;
-    text-decoration: bold;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
     color: #678b52;
+    text-decoration: underline;
 }
 
 /* Buttons */
@@ -130,6 +125,7 @@ input {
         flex-direction: column;
         text-align: center;
     }
+
     .about-text {
         text-align: center;
     }
@@ -143,26 +139,13 @@ input {
     }
 }
 
-/* Reduce motion for accessibility */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     section {
         transition: none;
     }
 
     section:hover {
-        transform: translateY(-6px);
+        transform: none;
     }
 }
-
-/* Adjust layout for smaller screens */
-@media (max-width: 600px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-    .about-text {
-        text-align: center;
-    }
-    
