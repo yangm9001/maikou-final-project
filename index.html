@@ -2,10 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0">
+
         <title>Mai Kou Yang | Software Systems</title>
 
         <link rel="stylesheet" href="css/styles.css"
+
     </head>
         
     <body>
@@ -23,13 +26,20 @@
                     <h2>About Me</h2>
 
                     <img src="images/profile.jpg"
-                         alt="Profile picture of Mai Kou Yang"
+                         alt="My profile picture"
+                         class="profile-pic">
+                    
+                    <div class="about-text">
 
                     <p>
                         Hello! My name is Mai Kou and I am a student at Western Technical College.
                         <br>
                         I am currently studying to become a software developer and I am very excited and eager to learn more about this field.
-                    </p>     
+                    </p>  
+                    
+                    </div>
+
+        </div>
 
                 </section>
 
@@ -44,14 +54,18 @@
 
                 </section>
 
-                <section>
+                <section class="notes-section">
                     <h2>Course Notes</h2>
 
                     <p>
+                        Click the button to see something
+                        I have learned in class!
+                        <br>
                         I will use this section to keep track of important concepts and notes from class.
                     </p>
 
-                    <button>View My Notes</button>
+                    <button id="noteButton">View My Notes</button>
+                    <p id="noteDisplay"></p>
                 </section>
 
                 <section>
@@ -64,7 +78,8 @@
             </main>
 
         </div>
-
+        
+    <script src="js/script.js"></script>    
     </body>
     </head>
 </html>

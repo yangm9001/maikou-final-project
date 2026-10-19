@@ -1,36 +1,46 @@
+/* Main website background */
 body {
-    background-color: #a47777;
-    color: #222222;
+    background-color: #536b45;
+    color: #263326;
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
+    padding: 30px 15px;
 }
-
+/* Center the entire website */
 .container {
-    width: 80%;
-    margin: 30px auto;
-    padding: 20px;
-    background-color:bisque
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 
 }
-
+/* Header */
 header {
-    background-color: #333333;
+    background-color: #344b32;
     color: white;
-    height: 150px;
-    padding: 20px;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shawdow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+/* Floating hover animation */
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #257a57;
-
+/* Section headings */
+h2 {
+    color: #344b32;
+    font-size: 26px;
+    margin-top: 0;
 }
 
 img {
@@ -39,10 +49,120 @@ img {
 
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-
+.about-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e8f4f8;
+    border-radius: 12px;
+}
+/* About Me layerout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid #536b45;
+}
 
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Links */
+a {
+    color: #345c3c;
+    text-decoration: bold;
+}
+
+a:hover {
+    color: #678b52;
+}
+
+/* Buttons */
+button {
+    background-color: #536b45;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #344b32;
+}
+
+/* Search input */
+input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 2px solid #a8b99d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Course Notes display */
+#noteDisplay {
+    background-color: #d7e1d0;
+    padding: 20px;
+    border-radius: 10px;
+    color: #344b32;
+    font-size: 18px;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    section {
+        transition: none;
+    }
+
+    section:hover {
+        transform: translateY(-6px);
+    }
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+    .about-text {
+        text-align: center;
+    }
+    
