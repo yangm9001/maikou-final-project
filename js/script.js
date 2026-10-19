@@ -27,7 +27,7 @@ function showNotes() {
         noteIndex = 0;
     }
     noteDisplay.textContent = 
-        Note ${noteIndex + 1} of ${notes.length}: ` +
+        Note ${noteIndex + 1} of ${notes.length}; ` +
         notes[noteIndex];
 
     noteIndex++;    
