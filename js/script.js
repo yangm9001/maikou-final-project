@@ -27,8 +27,13 @@ function showNotes() {
     if (noteIndex >= notes.length) {
         noteIndex = 0;
     }
-    noteDisplay.textContent = notes[noteIndex];
-    noteIndex++;
+    noteDisplay.textContent = 
+        Note ${noteIndex + 1} of ${notes.length}: ` +
+        notes[noteIndex];
+
+    noteIndex++;    
 }
 
-noteButton.addEventListener("click", showNotes);
+if (noteButton && noteDisplay) {
+    noteButton.addEventListener("click", showNotes);
+}
