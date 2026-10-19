@@ -14,7 +14,7 @@ const notes = [
     "Absolute vs. Relative paths: Absolute paths specify the full path to a file or directory, while relative paths specify the location of a file or directory in relation to the current working directory.",
     "ZIP files are compressed archives that can contain multiple files and directories, while RAR files are another type of compressed archive format.",
     "File extensions indicate the type of file and its associated program, while MIME types are used to identify the type of data being transmitted over the internet.",
-    "Cilents and servers communicate using protocols such as HTTP, FTP, and SMTP.",
+
 ];
 
 let noteIndex = 0;
