@@ -17,6 +17,7 @@ const notes = [
 
 ];
 
+<CodeBlock language="javascript" editable></CodeBlock>
 let noteIndex = 0;
 
 const noteButton = document.querySelector("#noteButton");
@@ -26,13 +27,14 @@ function showNotes() {
     if (noteIndex >= notes.length) {
         noteIndex = 0;
     }
-    noteDisplay.textContent = 
-        Note ${noteIndex + 1} of ${notes.length}; ` +
-        notes[noteIndex];
-
+<CodeBlock language="javascript" editable>
+noteDisplay.textContent =
+    `Note ${noteIndex + 1} of ${notes.length}: ${notes[noteIndex]}`;
+</CodeBlock>
     noteIndex++;    
 }
 
 if (noteButton && noteDisplay) {
     noteButton.addEventListener("click", showNotes);
 }
+</CodeBlock>
