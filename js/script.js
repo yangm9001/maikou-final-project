@@ -15,7 +15,6 @@ const notes = [
     "ZIP files are compressed archives that can contain multiple files and directories, while RAR files are another type of compressed archive format.",
     "File extensions indicate the type of file and its associated program, while MIME types are used to identify the type of data being transmitted over the internet.",
     "Cilents and servers communicate using protocols such as HTTP, FTP, and SMTP.",
-    "How the internet works: Cilent(browser) -> DNS -> Web Server -> Response -> Cilent(Browser)"
 ];
 
 let noteIndex = 0;
